@@ -1,5 +1,5 @@
 
-import { Link, NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 const MainLayout = () => {
     return (
@@ -11,6 +11,7 @@ const MainLayout = () => {
                         <h2 className="text-2xl font-semibold">Phone Shop</h2>
                     </div>
 
+                    {/* Start Navbar */}
                     <nav>
                         <ul className="flex gap-5 text-xl">
                             <li>
@@ -30,7 +31,7 @@ const MainLayout = () => {
                                         isPending ? "pending" : isActive ? "underline text-green-500" : ""
                                     }
                                 >
-                                   Favourites
+                                    Favourites
                                 </NavLink>
                             </li>
                             <li>
@@ -40,11 +41,16 @@ const MainLayout = () => {
                                         isPending ? "pending" : isActive ? "underline text-green-500" : ""
                                     }
                                 >
-                                  Login
+                                    Login
                                 </NavLink>
                             </li>
                         </ul>
                     </nav>
+                </div>
+
+                {/* OUtlet */}
+                <div>
+                    <Outlet />
                 </div>
             </section>
 
