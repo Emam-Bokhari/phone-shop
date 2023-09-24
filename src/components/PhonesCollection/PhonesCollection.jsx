@@ -1,7 +1,8 @@
 import PhonesCard from "../PhonesCard/PhonesCard";
+import PropTypes from "prop-types"
 
 const PhonesCollection = ({ phonesData }) => {
-    console.log(phonesData)
+
     return (
         <div className="my-10">
             <div>
@@ -13,5 +14,9 @@ const PhonesCollection = ({ phonesData }) => {
         </div>
     );
 };
+
+PhonesCollection.propTypes={
+    phonesData:PropTypes.array.isRequired
+}
 
 export default PhonesCollection;
